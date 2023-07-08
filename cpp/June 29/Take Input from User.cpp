@@ -1,17 +1,10 @@
 #include<iostream>
 using namespace std;
 int main(){
-    int a;
-    int b;
+    int a, b;
 
-    cin >> a;
-    cin >> b;
+    cin >> a >> b;
     
-    cout << "Value of a: ";
-    cout << a;
-
-    cout << "\n";
-
-    cout << "Value of b: ";
-    cout << b;
+    cout << "A: " << a << "\n";
+    cout << "B: " << b << endl;
 }
