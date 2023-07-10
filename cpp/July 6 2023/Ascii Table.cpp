@@ -1,6 +1,7 @@
 #include<iostream>
 using namespace std;
 int main(){
+    //Implicit Type Casting
     char ch = 'A';
     cout << 'A' + 1 << endl;
 
@@ -15,4 +16,8 @@ int main(){
         cout << ch << " : " << acode << endl;
         ch = ch + 1;
     }
+
+    // Explicit Type Casting
+    char cha = 'A';
+    cout << (int)cha << endl;
 }
