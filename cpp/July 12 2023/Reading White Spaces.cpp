@@ -12,7 +12,7 @@ int main(){
     ch = cin.get();
     while(ch != '\n'){
         count++;
-        cout << ch << endl;
+        cout << ch;
         ch = cin.get();
     }
 
