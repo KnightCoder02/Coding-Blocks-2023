@@ -12,19 +12,23 @@ void update(vector<int> &v){
         v[i] += 100;
     }
 }
-
 int main(){
-    vector<int> v;
-    // v.push_back(1);
-    // v.push_back(2);
-    // v.push_back(3);
-    // v.push_back(4);
-    // v.push_back(5);
-    for(int i = 1; i <= 5; i++){
-        v.push_back(i);
-        cout << "After inserting " << i << ", size: " << v.size() << ", capacity: " << v.capacity() << endl;
+    int n;
+    cin >> n;
+    vector<int> v(n);
+    
+    for(int i = 0; i < n; i++){
+        cin >> v[i];
     }
 
     update(v);
     print(v);
+
+    vector<int> m(n, 10);
+    cout << endl;
+    print(m);
+    cout << endl;
+    cout << m.capacity() << endl;
+    m.push_back(1);
+    cout << m.capacity() << endl;
 }
