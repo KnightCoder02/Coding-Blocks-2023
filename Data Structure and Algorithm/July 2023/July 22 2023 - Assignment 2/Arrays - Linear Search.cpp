@@ -26,5 +26,4 @@ int main() {
     cout << index << endl;
 
     delete[] arr;
-    return 0;
 }
