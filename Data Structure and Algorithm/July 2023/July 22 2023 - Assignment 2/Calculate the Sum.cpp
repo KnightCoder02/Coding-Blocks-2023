@@ -1,11 +1,12 @@
 #include<iostream>
 using namespace std;
+int mod = 1e9 + 7;
 int main(){
     int n;
     cin >> n;
 
-    int* a = new int[n];
-    int* b = new int[n];
+    long long* a = new long long[n];
+    long long* b = new long long[n];
     for(int i = 0; i < n; i++){
         cin >> a[i];
     }
@@ -23,18 +24,18 @@ int main(){
                 pos += n;    
             }
 
-            b[j] = a[j] + a[pos];
+            b[j] = (a[j] + a[pos]) % mod;
         }
         for(int j = 0; j < n; j++){
             a[j] = b[j];
         }
     }
 
-    int sum = 0;
+    long long sum = 0LL;
     for(int i = 0; i < n; i++){
-        sum = sum + a[i];
+        sum = (sum + a[i]) % mod;
     }
-    cout << sum;
+    cout << (sum % mod);
     delete[] a;
     delete[] b;
 }
