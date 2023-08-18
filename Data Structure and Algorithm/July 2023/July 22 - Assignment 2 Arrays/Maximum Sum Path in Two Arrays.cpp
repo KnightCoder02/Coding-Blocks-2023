@@ -12,9 +12,9 @@ int maxSumPath(int* a, int n, int* b, int m){
             else{
                 ans += sumB;
             }
-            ans += a[i];
             sumA = 0;
             sumB = 0;
+            ans += a[i];
             i++;
             j++;
         }
@@ -69,6 +69,6 @@ int main(){
         for(int i = 0; i < m; i++){
             cin >> b[i];
         }
-        cout << maxSumPath(a, n, b, m);
+        cout << maxSumPath(a, n, b, m) << endl;
     }
 }
