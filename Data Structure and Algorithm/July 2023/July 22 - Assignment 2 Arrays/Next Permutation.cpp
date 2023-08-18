@@ -1,55 +1,57 @@
 #include<iostream>
 #include<algorithm>
-#include<vector>
 using namespace std;
-
-void next_permutation(vector<int>& arr){
-    int n = arr.size();
+void next(char* a, int n){
     int i = n - 2;
-    
-    while(i >= 0 && arr[i] >= arr[i+1]){
+
+    while(a[i] >= a[i + 1]){
         i--;
     }
-    
+
     if(i == -1){
-        reverse(arr.begin(), arr.end());
-        return;
+        sort(a, a + n);
+        
+        for(int i = 0; i < n; i++){
+            cout << a[i] << " ";
+        }
+        cout << endl;
     }
-    
-    int j = n - 1;
-    while(arr[j] <= arr[i]){
-        j--;
-    }
-    
-    swap(arr[i], arr[j]);
-    int left = i + 1;
-    int right = n - 1;
-    
-    while(left < right){
-        swap(arr[left], arr[right]);
-        left++;
-        right--;
+    else{
+        // Find element which is just big than ith element
+        int index = -1;
+        
+        for(int j = i + 1; j < n; j++){
+            if(a[j] > a[i] && index == -1){
+                index = j;
+            }
+            else if(a[j] > a[i] && a[j] < a[index]){
+                index = j;
+            }
+        }
+
+        swap(a[i], a[index]);
+        sort(a + i + 1, a + n);
+        
+        for(int i = 0; i < n; i++){
+            cout << a[i] << " ";
+        }
+        cout << endl;
     }
 }
 
-int main() {
+int main(){
+    char a[10000];
     int t;
     cin >> t;
-    
-    for(int i = 0; i < t; i++){
-        int n;
+
+    while(t--){
+        int n, i;
         cin >> n;
-        vector<int> arr(n);
 
-        for(int i = 0; i < n; i++){
-            cin >> arr[i];
+        for(i = 0; i < n; i++){
+            cin >> a[i];
         }
-
-        next_permutation(arr);
-
-        for(int i = 0; i < n; i++){
-            cout << arr[i] << " ";
-        }
-        cout << endl;
+        a[i] = '\0';
+        next(a, n);
     }
 }
