@@ -1,12 +1,13 @@
 #include<iostream>
 using namespace std;
 int main(){
-    int min_fah, max_fah, step;
-    cin >> min_fah >> max_fah >> step;
+	int init, fval, step, cel;
+	cin >> init >> fval >> step;
 
-    for (int i = min_fah; i <= max_fah; i += step)
-    {
-        int cel = (5 / 9.0) * (i - 32);
-        cout << i << " " << cel << endl;
-    }
+	int f = init;
+	while(f <= fval){
+		cel = (5 / 9.0) * (f - 32);
+		cout << f << " " << cel << endl;
+		f = f + step;
+	}
 }
