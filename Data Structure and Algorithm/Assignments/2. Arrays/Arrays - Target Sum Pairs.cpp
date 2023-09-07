@@ -21,7 +21,6 @@ int main(){
                     cout << a[j] << " and " << a[i] << endl;
                 }
             }
-            
         }
     }
 }
