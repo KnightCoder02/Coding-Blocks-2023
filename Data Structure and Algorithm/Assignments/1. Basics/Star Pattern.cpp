@@ -5,27 +5,20 @@
  ****
 *****
 */
-#include <iostream>
+#include<iostream>
 using namespace std;
 int main(){
     int n;
-    cin >> n;
-
-    int i = 0, j = 0, k = 0;
-    while (i < n) {
-        while (k < (n - i - 1)) {
-            cout << "  ";
-            k++;
+	cin >> n;
+    for(int i = n; i > 0; i--){
+        for(int j = 1; j <= n; j++){
+            if(j >= i){
+                cout << "* ";
+            }
+            else{
+                cout << "  ";
+            }
         }
- 
-        k = 0;
-        while (j <= i) {
-            cout << "* ";
-            j++;
-        }
- 
-        j = 0;
-        i++;
         cout << endl;
     }
 }
