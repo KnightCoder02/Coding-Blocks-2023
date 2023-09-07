@@ -1,18 +1,18 @@
 #include<iostream>
 using namespace std;
-int main() {
+int main(){
 	int n, s, k, m;
     cin >> n >> s >> k >> m;
 	char a[100][100];
 	
-	for(int i=0;i<n;i++){
-		for(int j=0;j<s;j++){
-			cin>>a[i][j];
+	for(int i = 0; i < n; i++){
+		for(int j = 0; j < s; j++){
+			cin >> a[i][j];
 		}
 	}
 
-	for(int i=0;i<n;i++){
-		for(int j=0;j<s;j++){
+	for(int i = 0; i < n; i++){
+		for(int j = 0; j < s; j++){
 			if(m < k){
                 cout << "No" << endl;
                 return 0;
@@ -26,8 +26,7 @@ int main() {
 				m = m + 5;
 			}
 
-			else if(a[i][j]=='#')
-			{
+			else if(a[i][j]=='#'){
 				break;	
 			}
 
