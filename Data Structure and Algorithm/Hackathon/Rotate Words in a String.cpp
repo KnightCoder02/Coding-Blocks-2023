@@ -1,6 +1,6 @@
-#include <iostream>
-#include <string>
-#include <vector>
+#include<iostream>
+#include<string>
+#include<vector>
 using namespace std;
 int main(){
     string s;
@@ -27,6 +27,7 @@ int main(){
 
     for(int i = 0; i < temp.size(); ++i){
         cout << temp[i];
+        
         if(i != temp.size() - 1){
             cout << " ";
         }
