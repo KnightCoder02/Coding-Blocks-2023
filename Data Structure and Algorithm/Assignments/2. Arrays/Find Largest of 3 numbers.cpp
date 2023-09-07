@@ -1,7 +1,7 @@
 #include<iostream>
 #include<climits>
 using namespace std;
-int main() {
+int main(){
 	int lar = INT_MIN;
 	int n;
 	for(int i = 1; i <= 3; i++){
@@ -11,5 +11,4 @@ int main() {
 		}
 	}
 	cout << lar;
-	return 0;
 }
