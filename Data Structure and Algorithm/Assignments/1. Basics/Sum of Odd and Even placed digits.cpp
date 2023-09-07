@@ -1,20 +1,24 @@
 #include<iostream>
 using namespace std;
 int main(){
-    int n, count = 1, even = 0, odd = 0;
+    int n;
     cin >> n;
 
-    while(n != 0){
-        int last_digit = n % 10;
-        if(count % 2 == 0){
-            even = even + last_digit;
+    int pos = 1;
+    int odd_sum = 0;
+    int even_sum = 0;
+
+    while(n > 0){
+        int x = n % 10;
+        n = n / 10;
+        if(pos % 2 == 1){
+            odd_sum += x;
         }
         else{
-            odd = odd + last_digit;
+            even_sum += x;
         }
-        count++;
-        n /= 10;
+        pos++;
     }
-
-    cout << odd << endl << even << endl;
+    cout << odd_sum << endl;
+    cout << even_sum << endl;
 }
