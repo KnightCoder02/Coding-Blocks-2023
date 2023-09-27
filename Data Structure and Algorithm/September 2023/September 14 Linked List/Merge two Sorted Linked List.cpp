@@ -24,22 +24,6 @@ void insertAtEnd(node* &head, node* &tail, int data){
     }
 }
 
-// MIDDLE OF LINKED LIST
-node* midLL(node* head){
-    if(head == NULL || head->next == NULL){
-        return head;
-    }
-
-    node* slow = head;
-    node* fast = head->next;
-
-    while(fast != NULL && fast->next != NULL){
-        fast = fast->next->next;
-        slow = slow->next;
-    }
-    return slow;
-}
-
 // MERGE TWO SORTED LINKED LIST
 node* mergeLL(node* a, node* b){
     // Base case
@@ -64,29 +48,6 @@ node* mergeLL(node* a, node* b){
     return nH;
 }
 
-// MERGE SORT IN LINKED LIST
-node* mergeSort(node* head){
-    // Base case
-    if(!head || !head->next){
-        return head;
-    }
-
-    // Recursive case
-    // 1. Divide
-    node* mid = midLL(head);
-    node* a = head;
-    node* b = mid->next;
-    mid->next = NULL;
-
-    // 2. Sort
-    a = mergeSort(a);
-    b = mergeSort(b);
-
-    // 3. Merge
-    node* nH = mergeLL(a, b);
-    return nH;
-}
-
 // PRINTING LINKED LIST
 void printLL(node* head){
     while(head != NULL){
@@ -99,14 +60,24 @@ void printLL(node* head){
 int main(){
     node* head, *tail;
     head = tail = NULL;
+
+    node* head1, *tail1;
+    head1 = tail1 = NULL;
     
-    insertAtEnd(head, tail, 4);
+    insertAtEnd(head, tail, 1);
     insertAtEnd(head, tail, 3);
     insertAtEnd(head, tail, 5);
-    insertAtEnd(head, tail, 2);
-    insertAtEnd(head, tail, 6);
+    insertAtEnd(head, tail, 7);
+    insertAtEnd(head, tail, 9);
     printLL(head);
 
-    node* nH = mergeSort(head);
-    printLL(nH);
+    insertAtEnd(head1, tail1, 2);
+    insertAtEnd(head1, tail1, 4);
+    insertAtEnd(head1, tail1, 6);
+    insertAtEnd(head1, tail1, 8);
+    insertAtEnd(head1, tail1, 10);
+    printLL(head1);
+
+    head = mergeLL(head, head1);
+    printLL(head);
 }

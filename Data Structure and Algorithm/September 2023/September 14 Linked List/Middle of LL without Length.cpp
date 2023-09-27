@@ -40,53 +40,6 @@ node* midLL(node* head){
     return slow;
 }
 
-// MERGE TWO SORTED LINKED LIST
-node* mergeLL(node* a, node* b){
-    // Base case
-    if(!a){
-        return b;
-    }
-
-    if(!b){
-        return a;
-    }
-
-    // Recursive case
-    node* nH;
-    if(a->data < b->data){
-        nH = a;
-        nH->next = mergeLL(a->next, b);
-    }
-    else{
-        nH = b;
-        nH->next = mergeLL(a, b->next);
-    }
-    return nH;
-}
-
-// MERGE SORT IN LINKED LIST
-node* mergeSort(node* head){
-    // Base case
-    if(!head || !head->next){
-        return head;
-    }
-
-    // Recursive case
-    // 1. Divide
-    node* mid = midLL(head);
-    node* a = head;
-    node* b = mid->next;
-    mid->next = NULL;
-
-    // 2. Sort
-    a = mergeSort(a);
-    b = mergeSort(b);
-
-    // 3. Merge
-    node* nH = mergeLL(a, b);
-    return nH;
-}
-
 // PRINTING LINKED LIST
 void printLL(node* head){
     while(head != NULL){
@@ -101,12 +54,10 @@ int main(){
     head = tail = NULL;
     
     insertAtEnd(head, tail, 4);
-    insertAtEnd(head, tail, 3);
     insertAtEnd(head, tail, 5);
-    insertAtEnd(head, tail, 2);
-    insertAtEnd(head, tail, 6);
+    insertAtEnd(head, tail, 6);    
     printLL(head);
 
-    node* nH = mergeSort(head);
-    printLL(nH);
+    node* ans = midLL(head);
+    cout << "Middle: " << ans->data;
 }
