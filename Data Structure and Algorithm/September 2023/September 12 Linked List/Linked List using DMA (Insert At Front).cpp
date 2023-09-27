@@ -49,6 +49,5 @@ int main(){
     insertAtFront(head, tail, 1);
     insertAtFront(head, tail, 2);
     insertAtFront(head, tail, 3);
-    
     printLL(head);
 }
