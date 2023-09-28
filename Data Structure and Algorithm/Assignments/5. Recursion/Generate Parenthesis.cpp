@@ -1,37 +1,29 @@
-#include <iostream>
+#include<iostream>
 using namespace std;
-#define MAX_SIZE 100
+void solve(char* op, int n, int open, int close, int i){
+    // Base case
+    if(i == 2 * n){
+        op[i] = '\0';
+        cout << op << endl;
+        return;
+    }
 
-void _printParenthesis(int pos, int n, int open, int close);
-void printParenthesis(int n){
-	if (n > 0){
-		_printParenthesis(0, n, 0, 0);
-	}
-	return;
-}
-
-void _printParenthesis(int pos, int n, int open, int close){
-	static char str[MAX_SIZE];
-
-	if(close == n){
-		cout << str << endl;
-		return;
-	}
-	else{
-		if(open > close){
-			str[pos] = ')';
-			_printParenthesis(pos + 1, n, open, close + 1);
-		}
-
-		if(open < n){
-			str[pos] = '(';
-			_printParenthesis(pos + 1, n, open + 1, close);
-		}
-	}
+    // Recursion case
+    if(open > close){
+        op[i] = ')';
+        solve(op, n, open, close + 1, i + 1);
+    }
+    
+    if(open < n){
+        op[i] = '(';
+        solve(op, n, open + 1, close, i + 1);
+    }
 }
 
 int main(){
-	int n;
-	cin >> n;
-	printParenthesis(n);
+    int n;
+    cin >> n;
+
+    char op[50];
+    solve(op, n, 0, 0, 0);
 }
