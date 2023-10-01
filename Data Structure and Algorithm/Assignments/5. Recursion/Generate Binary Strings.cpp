@@ -2,34 +2,34 @@
 #include<cstring>
 using namespace std;
 
-void generateBinaryStrings(string &s, int index){
-    if(index == s.length()){
-        cout << s << " ";
+void solve(string s, int i, string op){
+    // Base case
+    if(s[i] == '\0'){
+        cout << op << " ";
         return;
     }
 
-    if(s[index] == '?'){
-        s[index] = '0';
-        
-        generateBinaryStrings(s, index + 1);
-        s[index] = '1';
-
-        generateBinaryStrings(s, index + 1);
-        s[index] = '?'; // Reset the character to '?' for backtracking
+    // Recursive case
+    if(s[i] == '?'){    
+        solve(s, i + 1, op + "0");
     }
+
+    if(s[i] == '?'){
+        solve(s, i + 1, op + "1");
+    }    
+
     else{
-        generateBinaryStrings(s, index + 1);
+        solve(s, i + 1, op + s[i]);
     }
 }
 
 int main(){
-    int T;
-    cin >> T;
+    int t;
+    cin >> t;
 
-    while(T--){
+    while(t--){
         string s;
         cin >> s;
-        generateBinaryStrings(s, 0);
-        cout << endl;
+        solve(s, 0, "");
     }
 }
