@@ -1,32 +1,31 @@
-#include <iostream>
+#include<iostream>
 using namespace std;
+void solve(string in, string out, bool isFirstDigit = true){
+    // base case
+    if(out.size() > in.size()){
+        return;
+    }
 
-class MyClass{
-    public:
-    void solve(int n, int sums){
-        if(sums > n){
-            return;
-        }
-
-        cout << sums << " ";
-        
-        if(sums == 0){
-            for(int i = 1; i < 10; ++i){
-                solve(n, 10 * sums + i);
-            }
-        }
-        else{
-            for(int i = 0; i < 10; ++i){
-                solve(n, 10 * sums + i);
-            }
+    if(isFirstDigit == false){
+        if(stoi(out) <= stoi(in)){
+            cout << out << " ";
         }
     }
-};
+
+    // recusion case
+    int start = isFirstDigit? 1 : 0;
+    for(int no = start; no <= 9; no++){
+        char ch = no + '0';
+        out.push_back(ch);
+        solve(in, out, false);
+        out.pop_back();
+    }
+}
 
 int main(){
-    int n;
-    cin >> n;
+    string in, out;
+    cin >> in;
 
-    MyClass obj;
-    obj.solve(n, 0);
+    cout << '0' << " ";
+    solve(in, out);
 }

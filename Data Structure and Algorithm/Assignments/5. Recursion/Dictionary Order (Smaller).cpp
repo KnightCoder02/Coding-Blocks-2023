@@ -1,35 +1,31 @@
 #include<iostream>
-#include<cstring>
 #include<algorithm>
-#include<set>
+#include<cstring>
 using namespace std;
+string temp;
 
-set<string> result;
-
-// Function to generate all words in dictionary order
-void generateWords(string str, string current){
-    if(str.empty()){
-        result.insert(current);
+void solve(string in, string out){
+    // base case
+    if(in.size() == 0){
+        if(out < temp){
+            cout << out << endl;
+        }
         return;
     }
 
-    for(int i = 0; i < str.length(); i++){
-        string remaining = str;
-        string nextCurrent = current + str[i];
-        remaining.erase(i, 1);
-        generateWords(remaining, nextCurrent);
+    // recursive case
+    for(int i = 0; i < in.size(); i++){
+        out.push_back(in[i]);
+        solve(in.substr(0, i) + in.substr(i + 1), out);
+        out.pop_back();
     }
 }
 
 int main(){
-    string input;
-    cin >> input;
+    string in, out = " ";
+    cin >> in;
+    temp = in;
 
-    generateWords(input, "");
-
-    for(const string& word : result){
-        if(word < input){
-            cout << word << endl;
-        }
-    }
+    sort(in.begin(), in.end());
+    solve(in, out);
 }
