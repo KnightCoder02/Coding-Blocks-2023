@@ -9,7 +9,7 @@ vector<string> v;
 void permutations(char* a, int i){
     // base case
     if(a[i] == '\0'){
-        if(strcmp(a, temp) < 0){
+        if(strcmp(a, temp) > 0){
             // Convert array to string then we can store in vector
             string x(a);
             v.push_back(x); 
