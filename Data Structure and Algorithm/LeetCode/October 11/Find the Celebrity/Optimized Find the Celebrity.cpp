@@ -21,10 +21,22 @@ class Solution{
     }
 
     int findCelebrity(int n){
-        for(int i = 0; i < n; i++){
-            if(isCeleb(i, n)){
-                return i;
+        int person;
+        int l = 0, r = n - 1;
+        while(l < r){
+            if(knows(l, r) == true){
+                // This means l cannot be a celebrity
+                l++;
             }
+            else{
+                // This means r cannot be a celebrity
+                r--;
+            }
+        }
+
+        // l and r are equal then find the celebrity
+        if(isCeleb(l, n)){
+            return l;
         }
         return -1;
     }
