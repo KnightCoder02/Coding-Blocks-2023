@@ -12,17 +12,28 @@ class node{
     }
 };
 
-node* buildTree(){
-    int data;
-    cin >> data;
-
-    if(data == -1){
+int pre[] = {8, 10, 1, 6, 3, 14};
+int k = 0;
+node* treeCreate(int *in, int s, int e){
+    // base case
+    if(s > e){
         return NULL;
     }
 
-    node* root = new node(data);
-    root->left = buildTree();
-    root->right = buildTree();
+    // recursive case
+    node* root = new node(pre[k]);
+    k++;
+    int index = -1;
+
+    for(int i = s; i <= e; i++){
+        if(in[i] == root->data){
+            index = i;
+            break;
+        }
+    }
+
+    root->left = treeCreate(in, s, index - 1);
+    root->right = treeCreate(in, index + 1, e);
     return root;
 }
 
@@ -56,20 +67,8 @@ void printLevelOrder(node* root){
     }
 }
 
-void mirror(node* root){
-    if(!root){
-        return;
-    }
-
-    swap(root->left, root->right);
-    mirror(root->left);
-    mirror(root->right);
-}
-
 int main(){
-    // input: 8 10 1 -1 -1 6 4 -1 -1 7 -1 -1 3 -1 14 13 -1 -1 -1
-    node* root = buildTree();
-    printLevelOrder(root);
-    mirror(root);
+    int in[] = {1, 10, 6, 8, 3, 14};
+    node* root = treeCreate(in, 0, 5);
     printLevelOrder(root);
 }

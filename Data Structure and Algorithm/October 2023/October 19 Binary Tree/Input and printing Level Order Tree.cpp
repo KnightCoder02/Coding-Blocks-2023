@@ -12,17 +12,35 @@ class node{
     }
 };
 
-node* buildTree(){
-    int data;
+node* buildLevelOrder(){
+    int data, left, right;
+    cout << "Enter the data for root node : ";
     cin >> data;
-
     if(data == -1){
         return NULL;
     }
 
     node* root = new node(data);
-    root->left = buildTree();
-    root->right = buildTree();
+    queue<node*> q;
+    q.push(root);
+
+    while(!q.empty()){
+        node* f = q.front();
+        q.pop();
+        cout << "Enter children of " << f->data << " : ";
+        cin >> left >> right;
+
+        if(left != -1){
+            f->left = new node(left);
+            q.push(f->left);
+        }
+
+        if(right != -1){
+            f->right = new node(right);
+            q.push(f->right);
+        }
+    }
+
     return root;
 }
 
@@ -56,20 +74,7 @@ void printLevelOrder(node* root){
     }
 }
 
-void mirror(node* root){
-    if(!root){
-        return;
-    }
-
-    swap(root->left, root->right);
-    mirror(root->left);
-    mirror(root->right);
-}
-
 int main(){
-    // input: 8 10 1 -1 -1 6 4 -1 -1 7 -1 -1 3 -1 14 13 -1 -1 -1
-    node* root = buildTree();
-    printLevelOrder(root);
-    mirror(root);
+    node* root = buildLevelOrder();
     printLevelOrder(root);
 }
