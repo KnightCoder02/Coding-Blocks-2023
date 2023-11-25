@@ -15,9 +15,9 @@ int main(){
     }
 
     for(int i = 0; i < 10000; i++){
-        while(freq[i]){
-            cout << i << "  ";
-            freq[i]--;
+        if(freq[i]){
+            cout << i << "  " << freq[i];
+            cout << endl;
         }
     }
 }

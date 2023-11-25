@@ -1,6 +1,8 @@
 #include<iostream>
+#include<map>
 using namespace std;
 int main(){
+    map<int, int> mp;
     int n;
     cin >> n;
 
@@ -9,15 +11,11 @@ int main(){
         cin >> arr[i];
     }
 
-    int freq[10000] = {0};
     for(int i = 0; i < n; i++){
-        freq[arr[i]]++;
+        mp[arr[i]]++;
     }
 
-    for(int i = 0; i < 10000; i++){
-        while(freq[i]){
-            cout << i << "  ";
-            freq[i]--;
-        }
+    for(auto x : mp){
+        cout << x.first << "  " << x.second;
     }
 }
