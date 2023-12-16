@@ -11,8 +11,8 @@ struct TreeNode{
     TreeNode(int value) : key(value), left(nullptr), right(nullptr) {}
 };
 
-// Function to print the left view of a binary tree
-void printLeftView(TreeNode* root){
+// Function to print the right side view of a binary tree
+void printRightSideView(TreeNode* root){
     if(!root){
         return;
     }
@@ -27,8 +27,8 @@ void printLeftView(TreeNode* root){
             TreeNode* current = q.front();
             q.pop();
 
-            // Print the leftmost node at each level
-            if(i == 0){
+            // Print the rightmost node at each level
+            if(i == levelSize - 1){
                 cout << current->key << " ";
             }
 
@@ -83,6 +83,6 @@ int main(){
         }
     }
 
-    // Print the left view
-    printLeftView(root);
+    // Print the right side view
+    printRightSideView(root);
 }
