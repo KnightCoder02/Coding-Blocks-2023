@@ -1,74 +1,62 @@
 #include<iostream>
-#include<vector>
-#include<sstream>
 using namespace std;
-
-class Node {
+class node{
     public:
     int data;
-    Node* left;
-    Node* right;
-
-    Node(int value) : data(value), left(nullptr), right(nullptr) {}
+    node *left;
+    node *right;
+    
+    node(int d){
+        data=d;
+        left=NULL;
+        right=NULL;
+    }
 };
 
-Node* buildTree(vector<string>& inputList){
-    if(inputList.empty()){
-        return nullptr;
-    }
+node *build(string s){
+    if(s == "true"){
+        int d;
+        cin >> d;
+        node *root = new node(d);
+        string l;
+        cin >> l;
+        
+        if(l == "true"){
+        root->left = build(l);
+        }
 
-    if(inputList[0] == "true"){
-        inputList.erase(inputList.begin());
+        string r;
+        cin >> r;
         
-        int rootData = std::stoi(inputList[0]);
-        inputList.erase(inputList.begin());
-        
-        Node* root = new Node(rootData);
-        root->left = buildTree(inputList);
-        root->right = buildTree(inputList);
-        
+        if(r == "true"){
+            root->right = build(r);
+        }
         return root;
-    }
-    else{
-        inputList.erase(inputList.begin());
-        return nullptr;
-    }
+	}
+	return NULL;
 }
 
-bool areStructurallyIdentical(Node* root1, Node* root2){
-    if(!root1 && !root2){
+bool isIdentical(node *root1, node *root2){   
+    if(root1 == NULL && root2 == NULL){
         return true;
     }
 
-    if(!root1 || !root2){
-        return false;
+    if(root1 != NULL && root2 != NULL){  
+        bool lt = isIdentical(root1->left, root2->left);
+        bool rt = isIdentical(root1->right, root2->right);
+        return(lt && rt);        
     }
-
-    return(areStructurallyIdentical(root1->left, root2->left) && areStructurallyIdentical(root1->right, root2->right));
+    return false;
 }
 
 int main(){
-    string input1, input2;
-    getline(cin, input1);
-    getline(cin, input2);
-
-    istringstream stream1(input1);
-    istringstream stream2(input2);
-
-    vector<string> inputList1, inputList2;
-    string token;
-
-    while(stream1 >> token){
-        inputList1.push_back(token);
+    node *root1 = build("true");    
+    node *root2 = build("true");
+    
+    if(isIdentical(root1, root2)){
+        cout << "true";
     }
-
-    while(stream2 >> token){
-        inputList2.push_back(token);
+    else{
+        cout << "false";
     }
-
-    Node* root1 = buildTree(inputList1);
-    Node* root2 = buildTree(inputList2);
-
-    bool result = areStructurallyIdentical(root1, root2);
-    cout << (result ? "true" : "false") << endl;
 }
