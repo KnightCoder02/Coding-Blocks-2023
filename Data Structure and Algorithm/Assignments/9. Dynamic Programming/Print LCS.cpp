@@ -1,0 +1,52 @@
+#include<iostream>
+#include<string>
+#include<vector>
+#include<algorithm>
+using namespace std;
+
+string longestCommonSubsequence(const string& A, const string& B){
+    int n = A.length();
+    int m = B.length();
+    
+    // Initialize a 2D vector for dynamic programming
+    vector<vector<int>> dp(n + 1, vector<int>(m + 1, 0));
+    
+    // Fill the dp table
+    for(int i = 1; i <= n; i++){
+        for(int j = 1; j <= m; j++){
+            
+            if(A[i - 1] == B[j - 1]){
+                dp[i][j] = dp[i - 1][j - 1] + 1;
+            }
+            
+            else{
+                dp[i][j] = max(dp[i - 1][j], dp[i][j - 1]);
+            }
+        }
+    }
+    
+    // Backtrack to find the LCS
+    string lcs;
+    int i = n, j = m;
+    while(i > 0 && j > 0){
+        if(A[i - 1] == B[j - 1]){
+            lcs = A[i - 1] + lcs;
+            --i;
+            --j;
+        }
+        
+        else if(dp[i - 1][j] > dp[i][j - 1]){
+            --i;
+        } else {
+            --j;
+        }
+    }
+    return lcs;
+}
+
+int main() {
+    string A, B;
+    cin >> A >> B;
+    
+    cout << longestCommonSubsequence(A, B) << endl;
+}
