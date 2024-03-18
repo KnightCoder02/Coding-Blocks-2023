@@ -1,0 +1,12 @@
+#div-1{
+    color: aqua;
+}
+
+div{
+    /* !important means all priorities gone. This is final. */
+    color: red !important;
+}
+
+.mydiv{
+    color: orange;
+}
