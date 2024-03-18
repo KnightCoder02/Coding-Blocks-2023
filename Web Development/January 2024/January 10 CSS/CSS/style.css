@@ -1,1 +1,18 @@
+.myelement{
+    color: blue;
+    background-color: orange;
+}
 
+.el{
+    color: red;
+    background-color: green;
+}
+
+/* For ID (#) is used for representation */
+#heading{
+    color: yellow;
+    background-color: black;
+}
+.el2{
+    background-color: magenta;
+}
