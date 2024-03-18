@@ -1,0 +1,40 @@
+body{
+    font-family: sans-serif;
+}
+
+.heading{
+    font-size: 50px;
+}
+
+div{
+    font-size: 26px;
+    line-height: 1.5;
+}
+
+/* .authority{
+    font-size: 26px;
+
+}
+
+.zooanimal{
+    font-size: 26px;
+} */
+
+.authority, .zooanimal{
+    font-size: 26px;
+}
+
+/* Margin, Padding and Border */
+.para{
+    /* border: width type color */
+    /* border: 1px solid black; */
+
+    border-top: 1px solid red;
+    border-top: 1px solid green;
+    
+    padding: 10px;
+    padding: 10px 20px 30px 40px;
+    
+    margin-top: 130px;
+    margin: 10px 20px 30px 40px; 
+}
