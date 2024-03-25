@@ -1,0 +1,35 @@
+.courses{
+    width: 90%;
+    margin: 10px auto;
+}
+
+.course-heading{
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.item1, .item2{
+    width: 50%;
+    height: 200px;
+}
+
+.item1{
+    float: left;
+}
+
+.item2{
+    float: right;
+}
+
+.courses-checkbox{
+    height: 20px;
+    width: 20px;
+}
+
+.courses-name{
+    font-size: 22px;
+}
+
+.courses-container{
+    margin: 10px;
+}

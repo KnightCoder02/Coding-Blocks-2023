@@ -1,1 +1,36 @@
+.header{
+    width: 100%;
+}
 
+.header-table{
+    width: 100%;
+}
+
+.cb-logo, .heading, .info{
+    width: 30%;
+}
+
+.cb-logo-img{
+    width: 50%;
+    background-image: url('../images/cblogo.png');
+    height: 100px;
+    background-repeat: no-repeat;
+    margin: auto;
+    background-size: contain;
+}
+
+.application, .enquiry, .enrolled{
+    width: 60%;
+    margin: auto;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.application{
+    text-decoration: underline;
+}
+
+.enquiry input, .enrolled input{
+    height: 20px;
+    width: 20px;
+}

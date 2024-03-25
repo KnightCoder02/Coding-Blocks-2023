@@ -1,0 +1,39 @@
+.user-details{
+    width: 90%;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.user-table{
+    text-align: center;
+    width: 100%;
+    height: 200px;
+    
+}
+
+.user-info{
+    width: 45%;
+}
+
+.user-field{
+    font-size: 26px;
+    margin: 10px 0;
+}
+
+.user-input{
+    font-size: 26px;
+    margin: 4px 0;
+    width: 70%;
+}
+
+.input-text{
+    float: left;
+    width: 20%;
+    text-align: left;
+    font-weight: bold;
+}
+
+.inputs-field{
+    float: right;
+    width: 79%;
+}
