@@ -1,0 +1,6 @@
+/* Universal Selector(*) */
+*{ 
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+}
