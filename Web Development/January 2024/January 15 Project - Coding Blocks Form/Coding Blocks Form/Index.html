@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CB Form</title>
+    
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .clearfix{
+            clear: both;
+        }
+    </style>
+
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/user-details.css">
+    <link rel="stylesheet" href="css/courses.css">
+</head>
+<body>
+    <form class="cb-form">
+        <!-- Header Section -->
+        <section class="header">
+            <table class="header-table">
+                <tr>
+                    <td class="cb-logo">
+                        <!-- CB Logo -->
+                        <div class="cb-logo-img"></div>
+                    </td>
+
+                    <td class="heading">
+                        <div class="application">Student Application Form</div>
+                    </td>
+
+                    <td class="info">
+                        <div class="enquiry">
+                            <input type="checkbox"> Enquiry
+                        </div>
+
+                        <div class="enrolled">
+                            <input type="checkbox"> Enrolled
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- User Information Collection -->
+        <section class="user-details">
+            <table class="user-table">
+                <tr class="tab-row">
+                    <td class="user-info">
+                        <div class="input-text">
+                            <div class="user-field">Name: </div>
+                            <div class="user-field">Contact No: </div>
+                            <div class="user-field">State: </div>
+                            <div class="user-field">College: </div>
+                            <div class="user-field">Branch: </div>
+                        </div>
+                        <div class="inputs-field">
+                            <input name="name" type="text" class="user-input">
+                            <input name="contact" type="number" class="user-input">
+                            <input name="state" type="text" class="user-input">
+                            <input name="college" type="text" class="user-input">
+                            <input name="branch" type="text" class="user-input">
+                        </div>
+                    </td>
+                    <td class="user-info">
+                        <div class="input-text">
+                            <div class="user-field">Date of Birth: </div>
+                            <div class="user-field">Address: </div>
+                            <div class="user-field">Pin Code: </div>
+                            <div class="user-field">University: </div>
+                            <div class="user-field">Graduation Year: </div>
+                        </div>
+                        <div class="inputs-field">
+                            <input name="dob" type="date" class="user-input">
+                            <input name="address" type="text" class="user-input">
+                            <input name="pin" type="number" class="user-input">
+                            <input name="university" type="text" class="user-input">
+                            <input name="year" type="text" class="user-input">
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Courses Selection -->
+        <section class="courses">
+            <div class="course-heading">Courses interested In (Please tick the appropriate one)</div>
+            <div class="course-selection">
+                <div class="course-select item1">
+                    <div class="courses-container">
+                        <input type="checkbox" name="launchpad" class="courses-checkbox">
+                        &nbsp;&nbsp; <span class="courses-name">Launchpad</span>
+                    </div>
+
+                    <div class="courses-container">
+                        <input type="checkbox" name="java" class="courses-checkbox">
+                        &nbsp;&nbsp; <span class="courses-name">Java</span>
+                    </div>
+
+                    <div class="courses-container">
+                        <input type="checkbox" name="data science" class="courses-checkbox">
+                        &nbsp;&nbsp; <span class="courses-name">Data Science</span>
+                    </div>
+
+                    <div class="courses-container">
+                        <input type="checkbox" name="ml" class="courses-checkbox">
+                        &nbsp;&nbsp; <span class="courses-name">Machine Learning</span>
+                    </div>
+
+                    <div class="courses-container">
+                        <input type="checkbox" name="blockchain" class="courses-checkbox">
+                        &nbsp;&nbsp; <span class="courses-name">Block Chain</span>
+                    </div>
+                </div>
+
+                <div class="course-select item2">
+                    <div class="courses-container">
+                        <input type="checkbox" name="ds" class="courses-checkbox">
+                        &nbsp;&nbsp; <span class="courses-name">Data Structure</span>
+                    </div>
+
+                    <div class="courses-container">
+                        <input type="checkbox" name="python" class="courses-checkbox">
+                        &nbsp;&nbsp; <span class="courses-name">Python</span>
+                    </div>
+
+                    <div class="courses-container">
+                        <input type="checkbox" name="sampoorna" class="courses-checkbox">
+                        &nbsp;&nbsp; <span class="courses-name">Sampoorna</span>
+                    </div>
+
+                    <div class="courses-container">
+                        <input type="checkbox" name="ai" class="courses-checkbox">
+                        &nbsp;&nbsp; <span class="courses-name">Artifial Intelligence</span>
+                    </div>
+
+                    <div class="courses-container">
+                        <input type="checkbox" name="wd" class="courses-checkbox">
+                        &nbsp;&nbsp; <span class="courses-name">Web Development</span>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </section>
+
+
+    </form>
+</body>
+</html>
