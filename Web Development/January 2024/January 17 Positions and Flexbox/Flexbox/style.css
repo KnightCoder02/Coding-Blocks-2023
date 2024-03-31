@@ -1,0 +1,48 @@
+.container{
+    height: 800px;
+    border: 5px solid black;
+    margin: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: row-reverse; */
+    justify-content: space-evenly;
+    align-items: baseline;
+}
+
+.child{
+    width: 300px;
+    height: 300px;
+    border: 2px solid royalblue;
+    color: white;
+    font-weight: 900;
+    font-size: 50px;
+    background-color: orange;
+}
+
+.child-1{
+    padding: 25px;
+}
+
+.child-4{
+    padding: 10px;
+}
+
+.child-5{
+    padding: 15px;
+}
+
+.child-6{
+    flex-grow: 2;
+}
+
+.child-7{
+    flex-grow: 3;
+}
+
+.child-8{
+    order: -1;
+}
+
+.child-3{
+    order: 1;
+}
