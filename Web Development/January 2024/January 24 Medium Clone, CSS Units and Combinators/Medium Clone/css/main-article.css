@@ -1,0 +1,19 @@
+.main-articles{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 90px;
+}
+
+.article-container{
+    width: 60%;
+    border: 1px solid black;
+    height: 2500px;
+}
+
+.article-topics-container{
+    width: 30%;
+    border: 1px solid black;
+    height: 300px;
+    position: sticky;
+    top: 110px;
+}
