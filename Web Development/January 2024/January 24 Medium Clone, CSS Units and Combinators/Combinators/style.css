@@ -1,0 +1,26 @@
+/* Child Selector */
+.parent .child{
+    background-color: black;
+    color: white;
+}
+
+.parent .child span{
+    background-color: red;
+    color: yellow;
+}
+
+/* Combinators */
+/* 1. Direct Child > */
+ul > li{
+    color: orange;
+}
+
+/* 2. Immediate Sibling + */
+li + li{
+    color: pink;
+}
+
+/* 3. General Sibling ~ */
+li ~ li{
+    color: blueviolet;
+}
