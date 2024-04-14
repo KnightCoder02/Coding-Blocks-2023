@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medium Clone Frontend</title>  
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .container{
+            width: 1200px;
+            margin: auto;
+            height: 500px;
+            margin-top: 90px;
+        }
+
+        .yellow-container{
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 550px;
+            border: 1px solid black;
+            width: 100%;
+            background-color: #FFC017;
+            z-index: -1;
+        }
+
+        .separation-line{
+            margin-top: 80px;
+            width: 99vw;
+            position: relative;
+            right: 300px;
+            border-bottom: 1px solid black;
+        }
+    </style>
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/carousel.css">
+    <link rel="stylesheet" href="./css/trending-articles.css">
+    <link rel="stylesheet" href="./css/main-article.css">
+</head>
+<body>
+    <!-- YELLOW BOX CONTAINER OF CAROUSEL -->
+    <div class="yellow-container"></div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-logo">
+            <div class="nav-image"></div>
+        </div>
+        <div class="nav-links">
+            <a class="nav-item" href="#">Our Story</a>
+            <a class="nav-item" href="#">Membership</a>
+            <a class="nav-item" href="#">Write</a>
+            <a class="nav-item" href="#">Sign in</a>
+            <button class="get-started">
+                <span>Get Started</span>
+                <div class="circle-1"></div>
+                <div class="circle-2"></div>
+            </button>
+        </div>
+    </nav>
+
+    <!-- CONTAINER -->
+    <div class="container">
+        <div class="carousel">
+            <h1 class="carousel-heading">Stay curious.</h1>
+            <div class="carousel-text">Discover stories, thinking and expertise from writers on any topic.</div>
+            <button class="carousel-button">Start Reading</button>
+        </div>
+
+        <div class="trending-articles">
+            <div class="trending-heading">
+                <img src="https://media.istockphoto.com/id/1459674281/vector/round-uptrend-arrow-icon-vector.jpg?b=1&s=170x170&k=20&c=ViCSKPNtyVaLhNa0t5yW67nKBor0SmiDOk8IQJdP_6Y=">
+                <div class="trending-heading-text">Trending on Medium</div>
+            </div>
+
+            <div class="articles-list">
+                <div class="article article-1">
+                    <div class="article-no">01</div>
+                    <div class="article-detail">
+                        <div class="article-detail-1">
+                            <img src="https://miro.medium.com/v2/resize:fill:40:40/1*CJe3891yB1A1mzMdqemkdg.jpeg">
+                            <div class="article-author-detail">
+                                <span class="author">
+                                    Thi-Lam-Thuy LE
+                                    <div class="about-author">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, officiis.</div>
+                                </span>
+                                in
+                                <span>Towards Data Science</span>
+                            </div>
+                        </div>
+                        <div class="article-detail-2">I Quit Murdering People for 7 days. Here's What happened?</div>
+                        <div class="article-detail-3">
+                            <span class="article-date">Jan 16&nbsp;&sdot;&nbsp;</span>
+                            <span class="article-read-time">3 min read</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="article article-2">
+                    <div class="article-no">02</div>
+                    <div class="article-detail">
+                        <div class="article-detail-1">
+                            <img src="https://miro.medium.com/v2/resize:fill:40:40/1*XVtdl45m8YaYrPI4buJ5yQ.png">
+                            <div class="article-author-detail">
+                                <span class="author">
+                                    Thi-Lam-Thuy LE
+                                    <div class="about-author">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, officiis.</div>
+                                </span>
+                                in
+                                <span>Towards Data Science</span>
+                            </div>
+                        </div>
+                        <div class="article-detail-2">I Quit Murdering People for 7 days. Here's What happened?</div>
+                        <div class="article-detail-3">
+                            <span class="article-date">Jan 16&nbsp;&sdot;&nbsp;</span>
+                            <span class="article-read-time">3 min read</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="article article-3">
+                    <div class="article-no">03</div>
+                    <div class="article-detail">
+                        <div class="article-detail-1">
+                            <img src="https://media.istockphoto.com/id/1459674281/vector/round-uptrend-arrow-icon-vector.jpg?b=1&s=170x170&k=20&c=ViCSKPNtyVaLhNa0t5yW67nKBor0SmiDOk8IQJdP_6Y=">
+                            <div class="article-author-detail">
+                                <span class="author">
+                                    Thi-Lam-Thuy LE
+                                    <div class="about-author">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, officiis.</div>
+                                </span>
+                                in
+                                <span>Towards Data Science</span>
+                            </div>
+                        </div>
+                        <div class="article-detail-2">I Quit Murdering People for 7 days. Here's What happened?</div>
+                        <div class="article-detail-3">
+                            <span class="article-date">Jan 16&nbsp;&sdot;&nbsp;</span>
+                            <span class="article-read-time">3 min read</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="article article-4">
+                    <div class="article-no">04</div>
+                    <div class="article-detail">
+                        <div class="article-detail-1">
+                            <img src="https://media.istockphoto.com/id/1459674281/vector/round-uptrend-arrow-icon-vector.jpg?b=1&s=170x170&k=20&c=ViCSKPNtyVaLhNa0t5yW67nKBor0SmiDOk8IQJdP_6Y=">
+                            <div class="article-author-detail">
+                                <span class="author">
+                                    Thi-Lam-Thuy LE
+                                    <div class="about-author">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, officiis.</div>
+                                </span>
+                                in
+                                <span>Towards Data Science</span>
+                            </div>
+                        </div>
+                        <div class="article-detail-2">I Quit Murdering People for 7 days. Here's What happened?</div>
+                        <div class="article-detail-3">
+                            <span class="article-date">Jan 16&nbsp;&sdot;&nbsp;</span>
+                            <span class="article-read-time">3 min read</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="article article-5">
+                    <div class="article-no">05</div>
+                    <div class="article-detail">
+                        <div class="article-detail-1">
+                            <img src="https://media.istockphoto.com/id/1459674281/vector/round-uptrend-arrow-icon-vector.jpg?b=1&s=170x170&k=20&c=ViCSKPNtyVaLhNa0t5yW67nKBor0SmiDOk8IQJdP_6Y=">
+                            <div class="article-author-detail">
+                                <span class="author">
+                                    Thi-Lam-Thuy LE
+                                    <div class="about-author">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, officiis.</div>
+                                </span> 
+                                in 
+                                <span>Towards Data Science</span>
+                            </div>
+                        </div>
+                        <div class="article-detail-2">I Quit Murdering People for 7 days. Here's What happened?</div>
+                        <div class="article-detail-3">
+                            <span class="article-date">Jan 16&nbsp;&sdot;&nbsp;</span>
+                            <span class="article-read-time">3 min read</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="article article-6">
+                    <div class="article-no">06</div>
+                    <div class="article-detail">
+                        <div class="article-detail-1">
+                            <img src="https://media.istockphoto.com/id/1459674281/vector/round-uptrend-arrow-icon-vector.jpg?b=1&s=170x170&k=20&c=ViCSKPNtyVaLhNa0t5yW67nKBor0SmiDOk8IQJdP_6Y=">
+                            <div class="article-author-detail">
+                                <span class="author">
+                                    Thi-Lam-Thuy LE
+                                    <div class="about-author">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, officiis.</div>
+                                </span>
+                                in
+                                <span>Towards Data Science</span>
+                            </div>
+                        </div>
+                        <div class="article-detail-2">I Quit Murdering People for 7 days. Here's What happened? Adding more text here</div>
+                        <div class="article-detail-3">
+                            <span class="article-date">Jan 16&nbsp;&sdot;&nbsp;</span>
+                            <span class="article-read-time">3 min read</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="separation-line"></div>
+
+        <div class="main-articles">
+            <div class="article-container"></div>
+            <div class="article-topics-container"></div>
+        </div>
+    </div>
+</body>
+</html>
