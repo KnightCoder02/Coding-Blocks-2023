@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Transforms</title>
     <style>
         *{
             font-size: 40px;
@@ -15,23 +15,26 @@
             background-color: orange;
             margin: 150px auto;
             border: 5px solid black;
-            transform: scaleX(3);
-            z-index: 1;
-            position: relative;
+            transform: rotateZ(45deg);
         }
 
         .div1{
-            width: 150px;
+            width: 400px;
             height: 500px;
-            background-color: rgb(103, 67, 0);
+            background-color: orange;
             margin: 150px auto;
             border: 5px solid black;
-            transform: scaleY(2);
+            transform: rotateX(55deg);
         }
     </style>
 </head>
 <body>
-    <div class="div"></div>
-    <div class="div1"></div>
+    <div class="div">
+        Rotate on Z by 45 Degree
+    </div>
+    
+    <div class="div1">
+        Rotate on X by 55 Degree
+    </div>
 </body>
 </html>
