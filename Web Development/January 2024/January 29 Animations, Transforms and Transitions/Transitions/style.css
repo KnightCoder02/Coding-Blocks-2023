@@ -1,0 +1,29 @@
+*{
+    font-size: 40px;
+}
+
+.div{
+    width: 400px;
+    height: 500px;
+    background-color: black;
+    margin: 150px auto;
+    border: 5px solid black;
+    transition-duration: 10s;
+    /* transition-delay: 4s; */
+    transition-timing-function: cubic-bezier(0, 1.59, 1, -0.58);
+}
+
+.div:hover{
+    background-color: gray;
+    transform: rotateZ(360deg);
+    border-radius: 50%;
+}
+
+.div1{
+    width: 400px;
+    height: 500px;
+    background-color: rgb(103, 67, 0);
+    margin: 150px auto;
+    border: 5px solid black;
+    transform: rotateZ(45deg);
+}
