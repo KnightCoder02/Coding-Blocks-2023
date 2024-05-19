@@ -1,14 +1,12 @@
+var i;
 function fun(){
+    var x;
     console.log(x);
-    var x = 10;
+    x = 10;
     console.log(x);
 }
 
 fun();
-
-for(var i = 0; i < 10; i++){
-
-}
-
+for(i = 0; i < 10; i++){}
 console.log(i);
 console.log(x);
