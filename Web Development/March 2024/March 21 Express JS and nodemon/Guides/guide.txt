@@ -1,0 +1,9 @@
+Steps to install express JS
+1. To initialize the project using npm init
+    > npm init
+    - will create package.json that will include all the dependencies which depends on my project
+
+2. Install express JS
+    - go to express documentation or npm and search express
+    > npm i express
+    - It will install entire code of express and on whatever packages the express is dependent on ...
