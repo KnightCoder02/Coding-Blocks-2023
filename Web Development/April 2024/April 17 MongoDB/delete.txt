@@ -1,0 +1,2 @@
+> db.collectionName.deleteOne();
+> db.collectionName.deleteMany();
