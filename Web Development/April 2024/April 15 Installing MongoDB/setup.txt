@@ -1,1 +1,16 @@
+- Install two softwares
+    - mongodb
+    Install mongodb.com -> products -> community edition
+        mongodb.com -> resources -> Server Documentation
 
+    MAC:
+        - Install homebrew: brew.sh
+        - Follow steps on 
+            https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-os-x/
+    
+    - mongoose: Mongo shell
+        Windows:
+            - resources -> server documentation -> mongosh
+        
+        Mac:
+            - Search it on google
